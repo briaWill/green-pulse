@@ -6,6 +6,7 @@ import { Framework } from './framework';
   providedIn: 'root'
 })
 export class FrameworkService {
+  // change when uploaded to cloud shell editor 'https://green-pulse-web-app-vu6zvqlsoa-uc.a.run.app/'
   private url = 'http://localhost:8080';
   frameworks$ = signal<Framework[]>([]);
   framework$ = signal<Framework>({} as Framework);
