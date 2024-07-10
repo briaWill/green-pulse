@@ -8,10 +8,10 @@ RUN npm install
 COPY . .
 
 # Build the Angular application for production
-RUN npm run build --prod
+RUN npm run build
 
 # Configure the nginx web server
-FROM nginx:1.17.1-alpine
+FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/client /usr/share/nginx/html
 
