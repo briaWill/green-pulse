@@ -1,4 +1,4 @@
-FROM node:22-alpine3.19
+FROM node:latest
 WORKDIR /usr/app
 
 # Install dependencies and build the project.
